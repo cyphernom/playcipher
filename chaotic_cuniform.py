@@ -42,7 +42,7 @@ def generate_complex_cipher(text, initial_state):
         'Z': '𒀙', 
         '0': '𒐀', '1': '𒐁', '2': '𒐂', '3': '𒐃', '4': '𒐄',
         '5': '𒐅', '6': '𒐆', '7': '𒐇', '8': '𒐈', '9': '𒐉',
-        ' ': ' ', ',': ',','$','<'
+        ' ': ' ', ',': ','
     }
 
 
@@ -86,10 +86,9 @@ def decipher_complex_cipher(encoded_text, initial_state):
 
 
 
-phrase = "THERE IS AN INVISIBLE PINK DRAGON IN MY GARAGE, AND YOU ALL BOUGHT IT."
-initial_state = [1.0 ,3.02, 2.03] #initial state of lorenz system
-ciphered_phrase = generate_complex_cipher(phrase, initial_state)
-print(ciphered_phrase)
 
-deciphered_phrase = decipher_complex_cipher(ciphered_phrase, initial_state)
+initial_state = [0.01 ,0.01, 1.0] #initial state of lorenz system
+
+
+deciphered_phrase = decipher_complex_cipher("𒀋𒀐 𒀒𒀔𒀋𒀅𒀇 𒀒𒀔𒀇𒀆𒀋𒀅𒀖𒀋𒀑𒀐 𒀇𒀐𒀆 𒀑𒀈𒀌𒀃𒀐𒀃𒀔𒀁𒐂𒐂𒐄 𒐄𒐇𒐄𒐂𒐄$:𒐀 𒀗 𒀑𒀅𒀖𒀋𒀄", initial_state)
 print(f'deciphered:{deciphered_phrase}')
